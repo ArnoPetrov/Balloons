@@ -1,3 +1,39 @@
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes LeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -9,43 +45,24 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #777777;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
   padding: 5rem;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .container {
   background-color: #F7F7F7;
 }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-}
-.header__logo {
-  position: absolute;
-  left: 5rem;
-  top: 5rem;
-  height: 7rem;
-  width: 5.6rem;
-}
-.header__box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
 }
 
 .title-first {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .title-first__main {
   display: block;
@@ -78,7 +95,7 @@ body {
   text-decoration: none;
   color: #777777;
   padding: 1.5rem 4rem;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 5rem;
   transition: all 0.5s;
   position: relative;
@@ -94,11 +111,11 @@ body {
 }
 .btn:active {
   transform: translateY(-0.2rem);
-  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
 }
 .btn::after {
   content: "";
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
   border-radius: 5rem;
@@ -114,39 +131,24 @@ body {
   animation-fill-mode: backwards;
 }
 
-@keyframes BtnToUp {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-@keyframes LeftToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(2rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
 }
-@keyframes RightToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-2rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
