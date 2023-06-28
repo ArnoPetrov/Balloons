@@ -6,3 +6,10 @@
     text-transform: uppercase
     text-decoration: none
     color: $color
+
+//Миксин для устранения схлопывания элементов при работе с float'ами
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
