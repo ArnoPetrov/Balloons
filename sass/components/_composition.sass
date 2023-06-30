@@ -1,0 +1,26 @@
+//Композиция изображений
+.composition
+    position: relative
+    &__photo
+        position: absolute
+        width: 55%
+        border-radius: .5rem
+        box-shadow: $box-shadow
+        outline-offset: 1em
+        z-index: 10
+        transition: all .2s
+        &_n1
+            top: 0
+            left: 0
+        &_n2
+            top: 2rem
+            right: 0
+        &_n3
+            top: 13rem
+            left: 10rem
+        &:hover
+            transform: scale(1.1)
+            outline: 1rem solid $color-brown-light
+            z-index: 20
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)

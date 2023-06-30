@@ -1,14 +1,12 @@
 //float-сетка
 .row
     max-width: $grid-width
-    background: #c89393
     margin: 0 auto
     &:not(:last-child)
         margin-bottom: $margin-vertical-big
     @include clearfix
 [class^="col-"]
     float: left
-    background: #88af7f
     &:not(:last-child)
         margin-right: $gutter-gorizontal
 .col-1-of-2
